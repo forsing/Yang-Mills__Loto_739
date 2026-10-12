@@ -18,9 +18,9 @@ from scipy.spatial import cKDTree
 
 
 DEFAULTS = (
-    "/Users/4c/Desktop/GHQ/data/loto7_4700_k81.csv",
-    "/Users/4c/Desktop/GHQ/data/loto7_4700_k81_loto_2972.csv",
-    "/Users/4c/Desktop/GHQ/data/loto7_4700_k81_loto_plus_1728.csv",
+    "/data/loto7_4700_k81.csv",
+    "/data/loto7_4700_k81_loto_2972.csv",
+    "/data/loto7_4700_k81_loto_plus_1728.csv",
 )
 
 WINDOW = 96
@@ -801,13 +801,13 @@ if __name__ == "__main__":
 
 
 """
-CSV: /Users/4c/Desktop/GHQ/data/loto7_4700_k81.csv
+CSV: /data/loto7_4700_k81.csv
 Hronologija: CSV mora biti od najstarijeg ka najnovijem kolu.
 Validacija: 48; odvojeni test: 64
 YANG-MILLS: POLJE I SAMOINTERAKCIJA: alpha=0.1, prosek=1.3906, pogoci 0..7=[14, 24, 15, 9, 2, 0, 0, 0]
 Kontrola: bez nekomutativnih interakcija: alpha=0.01, prosek=1.1406, pogoci 0..7=[11, 34, 18, 1, 0, 0, 0, 0]
 Kontrola: prethodno izvuceno kolo: 1.2344
-SLEDECI RED 4701: 10,11,12,13,14,20,25
+SLEDECI RED 4701: 10,x,12,y,14,z,25
 Skor=1.3450958548; koraci=11; istorijsko ponavljanje=False
 Skor nije verovatnoca. Pretraga: istorijska polazista i dozvoljene
 zamene jednog broja; lokalni optimum, bez tvrdnje o globalnom.
@@ -815,13 +815,13 @@ Matricna adaptacija u sedam dimenzija; maseni jaz nije pretpostavljen.
 
 
 
-CSV: /Users/4c/Desktop/GHQ/data/loto7_4700_k81_loto_2972.csv
+CSV: /data/loto7_4700_k81_loto_2972.csv
 Hronologija: CSV mora biti od najstarijeg ka najnovijem kolu.
 Validacija: 48; odvojeni test: 64
 YANG-MILLS: POLJE I SAMOINTERAKCIJA: alpha=0.1, prosek=1.1406, pogoci 0..7=[14, 33, 11, 6, 0, 0, 0, 0]
 Kontrola: bez nekomutativnih interakcija: alpha=0.01, prosek=1.2812, pogoci 0..7=[14, 28, 14, 7, 0, 1, 0, 0]
 Kontrola: prethodno izvuceno kolo: 1.3281
-SLEDECI RED 2973: 13,14,20,21,35,36,39
+SLEDECI RED 2973: 13,x,20,y,35,z,39
 Skor=0.7636624492; koraci=12; istorijsko ponavljanje=False
 Skor nije verovatnoca. Pretraga: istorijska polazista i dozvoljene
 zamene jednog broja; lokalni optimum, bez tvrdnje o globalnom.
@@ -829,13 +829,13 @@ Matricna adaptacija u sedam dimenzija; maseni jaz nije pretpostavljen.
 
 
 
-CSV: /Users/4c/Desktop/GHQ/data/loto7_4700_k81_loto_plus_1728.csv
+CSV: /data/loto7_4700_k81_loto_plus_1728.csv
 Hronologija: CSV mora biti od najstarijeg ka najnovijem kolu.
 Validacija: 48; odvojeni test: 64
 YANG-MILLS: POLJE I SAMOINTERAKCIJA: alpha=0.1, prosek=1.2031, pogoci 0..7=[16, 26, 15, 7, 0, 0, 0, 0]
 Kontrola: bez nekomutativnih interakcija: alpha=1, prosek=1.0156, pogoci 0..7=[19, 30, 10, 5, 0, 0, 0, 0]
 Kontrola: prethodno izvuceno kolo: 1.2969
-SLEDECI RED 1729: 1,4,5,6,11,12,13
+SLEDECI RED 1729: 1,x,5,y,11,z,13
 Skor=0.7571195416; koraci=17; istorijsko ponavljanje=False
 Skor nije verovatnoca. Pretraga: istorijska polazista i dozvoljene
 zamene jednog broja; lokalni optimum, bez tvrdnje o globalnom.
@@ -885,9 +885,9 @@ Korisnost moje adaptacije utvrdiću poređenjem na narednim kolima, posebno prov
 Provereno je na 48 validacionih i 64 odvojena testna kola. Samointerakcija je pomogla na zbirnom i Plus fajlu, a odmogla na Loto fajlu.
 
 CSV	        Prosek pogodaka	Bez interakcija	Sledeća kombinacija
-Zbirni 4700	1,3906	        1,1406	        10,11,12,13,14,20,25
-Loto 2972	1,1406	        1,2812	        13,14,20,21,35,36,39
-Plus 1728	1,2031	        1,0156	        1,4,5,6,11,12,13
+Zbirni 4700	1,3906	        1,1406	        10,x,12,y,14,z,25
+Loto 2972	1,1406	        1,2812	        13,x,20,y,35,z,39
+Plus 1728	1,2031	        1,0156	        1,x,5,y,11,z,13
 
 Prošle su matematičke provere, ponovljivost, hronologija i provera lokalnog optimuma.
 """
